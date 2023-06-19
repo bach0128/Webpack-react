@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+    <title>Test</title>
+</head>
+<body>
+
+
+    <div class="app"></div>
+    
+    <script type="text/babel">
+        // const h1DOM = document.createElement("h1");
+        // const ulDOM = document.createElement("ul");
+
+        // const liDOM1 = document.createElement("li");
+        // liDOM1.innerText = 'javascript'
+        // const liDOM2 = document.createElement("li");
+        // liDOM2.innerText = 'ReactJs'
+
+        // ulDOM.appendChild(liDOM1);
+        // ulDOM.appendChild(liDOM2);
+        
+        // h1DOM.title = 'Hello world'
+        // h1DOM.className = 'heading'
+
+        // h1DOM.innerText = 'Hello world'
+
+        // document.body.appendChild(h1DOM)
+        // document.body.appendChild(ulDOM)
+
+
+        // React
+        // const h1React = React.createElement('h1', 
+        //     {
+        //         title: 'Hello world',
+        //         className: 'heading',
+        //     }, 
+        //     'hello guys!',
+        //     )
+
+        // const ulReact = React.createElement(
+        //     'ul',
+        //     {
+        //         id: 'ul-id',
+        //         style: 'color: red;font-size:30px'
+        //     },
+        //     React.createElement('li', null, 'javascript'),
+        //     React.createElement('li', null, 'reactjs'),
+        //     )
+
+        // const postItem = React.createElement(
+        //     'div',
+        //     {
+        //         className: 'post-item'
+        //     },
+        //     React.createElement(
+        //         'h2',
+        //         {
+        //             title: 'Hoc React tai f8'
+        //         },
+        //         'Hoc React'
+        //     ),
+        //     React.createElement('p', {}, 'Hoc React tu co ban toi nang cao')
+        // )
+
+
+
+        //Get root element
+        // const root = document.getElementById('root')
+        // React @17
+        // React-DOM render UI
+        // ReactDOM.render(postItem, root) 
+        
+        // React @18
+        // const root = ReactDOM.createRoot(container)
+        // root.render(postItem)
+
+
+        const jsx = React.createElement(
+            React.Fragment,
+            null,
+            React.createElement('h1', null, 'heading 1')
+        )
+        
+        function Header() {
+            return (
+                <div classname="header"> New header </div>
+            )
+        }
+
+        class Content extends React.Component {
+            render() { 
+                <div classname="content"> New content </div>
+            }
+        }
+        const app = (
+        <Header />
+        )
+
+        ReactDOM.render(app, document.getElementById('app'))
+    </script>
+</body>
+</html>
